@@ -1,0 +1,29 @@
+{
+  "name": "aengine/entity",
+  "description": "Model and Collection classes",
+  "keywords": [
+    "php",
+    "Model",
+    "Collection",
+    "AEngine"
+  ],
+  "homepage": "https://github.com/AEngine/entity",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Aleksey Ilyin",
+      "email": "alksily@icloud.com",
+      "homepage": "https://www.facebook.com/aleksey.ily",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AEngine\\Entity\\": "src/"
+    },
+    "files": ["src/helpers.php"]
+  }
+}
