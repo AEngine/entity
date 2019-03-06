@@ -1,6 +1,5 @@
 AEngine Entity
 ==== 
-
 Some parts of the project were influenced by: Laravel, Symfony Framework's. Thank you!
 
 #### Requirements
@@ -11,7 +10,8 @@ Run the following command in the root directory of your web project:
 > `composer require aengine/entity`
 
 #### Usage
-Create an `index.php` file with the following contents:
+
+Example use Model and Collection (docs for [collection by laravel](https://laravel.com/docs/5.6/collections))
 
 ```php
 class Car extends Model {
