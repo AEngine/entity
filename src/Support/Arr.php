@@ -221,6 +221,31 @@ class Arr
     }
 
     /**
+     * Flatten a multi-dimensional associative array <input name=""> style.
+     *
+     * @param array  $array
+     * @param string $prepend
+     *
+     * @return array
+     */
+    public static function input($array, $prepend = '')
+    {
+        $results = [];
+
+        foreach ($array as $key => $value) {
+            $key = $prepend ? $prepend . "[$key]" : $key;
+
+            if (is_array($value) && !empty($value)) {
+                $results = array_merge($results, static::input($value, $key));
+            } else {
+                $results[$key] = $value;
+            }
+        }
+
+        return $results;
+    }
+
+    /**
      * Get all of the given array except for a specified array of keys.
      *
      * @param array        $array

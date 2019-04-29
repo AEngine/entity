@@ -194,6 +194,21 @@ if (!function_exists('array_dot')) {
     }
 }
 
+if (!function_exists('array_input')) {
+    /**
+     * Flatten a multi-dimensional associative array <input name=""> style.
+     *
+     * @param array  $array
+     * @param string $prepend
+     *
+     * @return array
+     */
+    function array_input($array, $prepend = '')
+    {
+        return Arr::input($array, $prepend);
+    }
+}
+
 if (!function_exists('array_except')) {
     /**
      * Get all of the given array except for a specified array of keys.
