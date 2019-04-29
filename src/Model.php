@@ -118,6 +118,15 @@ abstract class Model implements ModelInterface
     }
 
     /**
+     * Clone this model
+     *
+     * @return Model
+     */
+    public function clone() {
+        return new static($this->toArray());
+    }
+
+    /**
      * Return model as array
      *
      * @return array
